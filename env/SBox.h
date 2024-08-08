@@ -1,0 +1,18 @@
+const u32 sboxtab[16] = { /* S-Box lookup table */
+    0x4F7A9C25,
+    0x7A93C86B,
+    0xEBCD4206,
+    0x9531ADB8,
+    0x0DAC2587,
+    0xC38F7490,
+    0xF8E6DB12,
+    0x1E0957D4,
+    0xB658E143,
+    0x39170F5D,
+    0xA1403ECF,
+    0x82DBF631,
+    0x5C2410AE,
+    0xD4B26379,
+    0x276E8AFC,
+    0x60F5B9EA,
+};
