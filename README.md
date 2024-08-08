@@ -1,18 +1,23 @@
-
-NAME
+**NAME**
 
 S.A.P.E. Serpent Algorythm based Paranoia [En|De]crypter
 
-SYNOPSIS
+**SYNOPSIS**
 
 sape-enc 'input file' 'output file'
 sape-dec [-w] 'input file' ['output file']
 
-DESCRIPTION
+**DESCRIPTION**
+
+
+	A simple C only implementation of the Serpent block cypher. License: Public domain.
+
+	https://en.wikipedia.org/wiki/Serpent_(cipher)
+
 
 	-w	write file to disk. If no output file name is defined, the original filenam from encrypted header is used.
 
-INSTALLATION
+**INSTALLATION**
 
 	Extract all files into a clean folder. Be sure you have gcc and the make tools installed.
 
@@ -23,7 +28,7 @@ INSTALLATION
 	You should now get two new executable binaries in your working folder: sape-enc and sape-dec
 	They can be copied to /usr/bin for example to use them system-wide.
 
-EXAMPLES
+**EXAMPLES**
 
 	sape-enc mytext.txt myencryptedtext.enc
 		after start, enter your private password and it encrypts your file
@@ -34,11 +39,11 @@ EXAMPLES
 	sape-dec -w myencryptedtext.enc ~/text.txt
 		after start, enter your private password and the original file is written as text.txt to the home directory
 
-AUTHOR
-	Written by Anonymous. Expect us.
+**AUTHOR**
+	Written by Tobias Weber 2022
 
 
-MORE DETAILS
+**MORE DETAILS**
 
 	The encryption works as follows:
 
