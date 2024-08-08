@@ -2,46 +2,66 @@
 
 S.A.P.E. Serpent Algorythm based Paranoia [En|De]crypter
 
+
 **SYNOPSIS**
 
-sape-enc 'input file' 'output file'
-sape-dec [-w] 'input file' ['output file']
+`sape-enc 'input file' 'output file'`
+
+`sape-dec [-w] 'input file' ['output file']`
+
 
 **DESCRIPTION**
 
-A simple plain C implementation of the Serpent block cypher.
-
-**License**
-Public domain. Use, spread, edit this code as you like but at your own risk. 
+A simple plain C implementation of the Serpent block cypher for easy use.
 
 Read details about the algorithm in Wikipedia: https://en.wikipedia.org/wiki/Serpent_(cipher)
 
-	-w	write file to disk. If no output file name is defined, the original filenam from encrypted header is used.
+
+**AUTHOR**
+
+Written by Tobias Weber 2022
+
+
+**License**
+
+Public domain. Use, spread, edit this code as you like but at your own risk. No warranty
+that this is working relibaly. Code must not be used in harmful or dangerous environments.
+
 
 **INSTALLATION**
 
-	Extract all files into a clean folder. Be sure you have gcc and the make tools installed.
+Extract all files into a clean folder. Be sure you have gcc and the make tools installed.
 
-	Run 'make all'
+Run `make all`
 
-	To clean the build run 'make clean'
+To clean the build run `make clean`
 
-	You should now get two new executable binaries in your working folder: sape-enc and sape-dec
-	They can be copied to /usr/bin for example to use them system-wide.
+You should now get two new executable binaries in your working folder: sape-enc and sape-dec
+They can be copied to /usr/bin for example to use them system-wide.
+
+
+**command line parameters**
+
+Encrypt with
+`sape-enc <file-to-encode> <encoded-file>`.
+Decrypt with
+`sape-enc <file-to-decode> [-w [<encoded-file>]]`
+
+Write to explicit file:
+	-w	write file to disk. If no output file name is defined, the original filename from encrypted header is used.
+
 
 **EXAMPLES**
 
-	sape-enc mytext.txt myencryptedtext.enc
-		after start, enter your private password and it encrypts your file
+`sape-enc mytext.txt myencryptedtext.enc`
+	When executed, enter your private password and it encrypts your file
 
-	sape-dec -w myencryptedtext.enc
-		after start, enter your private password and the original file is written to the working directoy
+`sape-dec -w myencryptedtext.enc`
+	When executed, enter your private password and the original file is written to the working directoy
 
-	sape-dec -w myencryptedtext.enc ~/text.txt
-		after start, enter your private password and the original file is written as text.txt to the home directory
+`sape-dec -w myencryptedtext.enc ~/text.txt`
+	When executed, enter your private password and the original file is written as text.txt to the home directory
 
-**AUTHOR**
-	Written by Tobias Weber 2022
 
 
 **MORE DETAILS**
@@ -66,8 +86,8 @@ Read details about the algorithm in Wikipedia: https://en.wikipedia.org/wiki/Ser
 
 	4. The user provided password that must be entered manually wich each en/decrpyt. It is never stored anywhere on the computer.
 
-	If only one of the above parameters differ between encryption and decryption function only 1 bit, the encrypted data cannot be decrypted.
+	If only one of the above parameters differ between encryption and decryption function by even only 1 bit, the encrypted data cannot be decrypted.
 
-	The current SBox and Key are default values and shall not be used for any encryption.
+	The current SBox and Key are default values and shall changed and shall not be used for any real life encryption.
 
 
