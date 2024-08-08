@@ -9,11 +9,12 @@ sape-dec [-w] 'input file' ['output file']
 
 **DESCRIPTION**
 
+A simple plain C implementation of the Serpent block cypher.
 
-	A simple C only implementation of the Serpent block cypher. License: Public domain.
+**License**
+Public domain. Use, spread, edit this code as you like but at your own risk. 
 
-	https://en.wikipedia.org/wiki/Serpent_(cipher)
-
+Read details about the algorithm in Wikipedia: https://en.wikipedia.org/wiki/Serpent_(cipher)
 
 	-w	write file to disk. If no output file name is defined, the original filenam from encrypted header is used.
 
